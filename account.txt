@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int account_no,password,user_entered=123321;
+    printf("PRESS 1: FOR DEPOSIT MONEY\n");
+    printf("PRESS 2: FOR DEBIT MONEY \n");
+    printf("PRESS 3: FOR CHECK CURRENT BANK BALANCE\n");
+    printf("PRESS 4: FOR CHECK TRANSCATION HISTORY \n");
+    printf("Enter your account no.= ");
+    scanf("%d",&account_no);
+    printf("Enter your password:: ");
+    scanf("%d",&password);
+    if(password==user_entered){
+      
+    }
+    return 0;
+}
