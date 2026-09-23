@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main() {
+    int month,total_days,present,absent,earning,total_holi,total_holiday;
+    int after_holiday,holiday_earning,total_earning;
+    int days[12]={31, 28, 31, 30, 31, 30,
+ 31, 31, 30, 31, 30, 31};
+        int holiday[12]={5,4,9,5,7,5,4,7,5,6,6,5};
+    
+    char *multiply[12]={"JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOVE","DEC"};
+    char *month_name;
+   // char *multi[1]={"sunday"};
+    printf("Enter your month(1-12):: ");
+    scanf("%d",&month);
+    //month_name = *multiply[month - 1];
+    printf("MONTH NAME=%s\n", multiply[month-1]);
+    if(month<1 || month>12){
+        printf("invalid no. of month!!!");
+        return 0;
+    }
+    total_days = days[month - 1] ;
+    total_holi = month[holiday - 1];
+    after_holiday = total_days-total_holi;
+    
+   // if(total_holiday)
+   
+    printf("HOLIDay in a month =%d\n",total_holi);
+    printf("AFTER HOLIDAY=%d\n",after_holiday);
+      printf("Enter your day of present:: ");
+    scanf("%d",&present);
+    if( present<after_holiday){
+    if(present==0){
+        printf("no earning.\n");
+        printf("come to office .\n");
+        return 0;
+    }  
+    if(present<0 || present>total_days){
+        printf("invalid present days!!");
+        printf("holiday=%s\n",holiday);
+        return 0;
+    }
+        
+    absent = after_holiday-present;
+    earning=present*500;
+    holiday_earning=(*holiday*500*1/2)+earning;
+    //total_earning=(earning*)
+    printf("MONTH NAME=%s\n", multiply[month-1]);
+    printf("TOTAL DAYS = %d\n",total_days);
+    printf("PRESENT = %d\n",present);
+    printf("ABSENT = %d\n",absent);
+    printf("EARNING = %d\n",holiday_earning);
+    }
+    else{
+        printf("invalid holiday!!");
+    }
+    return 0;
+}
